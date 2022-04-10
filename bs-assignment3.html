@@ -1,0 +1,781 @@
+<!doctype html>
+<html>
+<head>
+    <title>Bootstrap assignment3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+                                                                   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;  
+      }
+      .BR1 {
+          background: url("https://cdn.wallpapersafari.com/95/2/D2jLyX.jpg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+      }
+      .borderbottom {
+        background-color: blue;
+        padding: 1.5px 40px;
+      }
+      .BR2 {
+          background: url("https://wallpaperaccess.com/full/2210596.jpg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+      }
+      @media only screen and (min-width:200px) and (max-width:578px) { 
+       .LogoD {
+         font-size: medium;
+         font-weight: 600;
+       }
+       .paddacci {
+         padding: 0 3px; 
+         padding-top: 1px; 
+         padding-bottom: 5px;
+       }
+       .textCenter {
+         text-align: center;
+         padding: 18px 12px; 
+       }
+       .textCenter1 {
+         padding: 0 25px;
+       }
+       .fontsize {
+         font-size: small;
+         font-weight: 500;
+         padding: 10px 0;
+       }
+       .fontsizeB {
+         font-size: small; 
+         padding: 10px 0;
+       }
+      }
+      @media only screen and (min-width:578px) and (max-width:992px) { 
+        .LogoD {
+         font-size: large;
+         font-weight: 600;
+       }
+        .paddacci {
+         padding: 0 8px;
+         padding-top: 5px;
+         padding-bottom: 6px;
+       }
+       .textCenter {
+         padding-top: 6rem; 
+       }
+       .textCenter1 {
+         padding-top: 2rem; 
+       }
+       .fontsize {
+         font-size: medium;
+         font-weight: 500;
+       }
+       .fontsizeB {
+         font-size: medium;
+       }
+      }
+      @media only screen and (min-width:992px) and (max-width:2560px) {
+        .LogoD {
+         font-size: x-large;
+         font-weight: 600;
+       } 
+        .borderdt {
+            border: dotted 2px white; 
+            padding: 0.4em 6em;
+        }
+        .paddacci {
+         padding: 0 8px;
+         padding-top: 5px;
+         padding-bottom: 6px;
+       }
+       .textCenter {
+         padding-top: 6rem;
+       }
+       .textCenter1 {  
+         padding-top: 2rem; 
+       }
+       .fontsize {
+         font-size: large;
+         font-weight: 500;
+       }
+       .fontsizeB {
+         font-size: large;
+       }
+      }
+      @media only screen and (min-width:578px) and (max-width:767px) {
+        .fontsize {
+         padding: 12px 0;
+       }
+       .fontsizeB { 
+         padding: 12px 0;
+       }
+      }
+      @media only screen and (min-width:200px) and (max-width:767px) {
+        .aligngradient {
+          display: block; 
+          justify-content: center;
+          
+        }
+      }
+      @media only screen and (min-width:200px) and (max-width:352px) {
+        .marginCarousel {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 17em;
+       } 
+      }
+      @media only screen and (min-width:353px) and (max-width:456px) {
+        .marginCarousel {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15.5em;
+       } 
+      }
+      @media only screen and (min-width:457px) and (max-width:548px) {
+        .marginCarousel {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 13em; 
+       }
+      } 
+      @media only screen and (min-width:549px) and (max-width:757px) {
+        .marginCarousel {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 12em; 
+       }
+      } 
+      @media only screen and (min-width:757px) and (max-width:768px) {
+        .marginCarousel {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 12em;  
+       }   
+      }  
+      @media only screen and (min-width:768px) and (max-width:1000px) {
+        .marginCarousel {
+            width: 120px;
+            height: 130px; 
+            margin-bottom: 11em; 
+       }
+      } 
+      @media only screen and (min-width:1001px) and (max-width:1200px) {
+        .marginCarousel {
+            width: 120px;
+            height: 130px; 
+            margin-bottom: 11em; 
+       }
+      } 
+      @media only screen and (min-width:1200px) and (max-width:2000px) {
+        .marginCarousel {
+            width: 120px;
+            height: 130px; 
+            margin-bottom: 10em; 
+       }
+      } 
+      @media only screen and (min-width:2000px) and (max-width:2560px) {
+        .marginCarousel {
+            width: 150px;
+            height: 150px; 
+            margin-bottom: 10em; 
+       }
+      } 
+      @media only screen and (min-width:200px) and (max-width:500px) {
+       .videosize {
+          width:260px;
+          height:168px;
+       }
+      }
+      @media only screen and (min-width:500px) and (max-width:800px) {
+       .videosize {
+          width:360px;
+          height:208px;
+       }
+      }
+      @media only screen and (min-width:800px) and (max-width:2560px) {
+       .videosize {
+          width:560px;
+          height:315px;
+       }
+      }
+      @media only screen and (min-width:100px) and (max-width:576px) {
+        .featureDisplay1 {
+          display: none;
+        }
+        .featureDisplay2 {
+          display: block;
+        }
+      }
+      @media only screen and (min-width:576px) and (max-width:2560px) {
+        .featureDisplay1 {
+          display: block;
+        }
+        .featureDisplay2 {
+          display: none;
+        }
+      }
+    </style>      
+</head>
+<body> 
+    <div class="BR1 pb-5">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">  
+        <div class="container"> 
+          <a class="navbar-brand text-light LogoD" style="text-transform: uppercase;" href="#"> logodesign</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> 
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto text-end pe-2" style="column-gap: 15px;">    
+                <li class="nav-item"><a href="#" class="nav-link active text-primary" style="font-size: small; font-weight: bolder;">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active text-light fw-bold" style="font-size: small;">Service</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active text-light  fw-bold" style="font-size: small;">About</a></li> 
+                <li class="nav-item"><a href="#" class="nav-link active text-light fw-bold" style="font-size: small;">Team</a></li> 
+                <li class="nav-item"><a href="#" class="nav-link active text-light fw-bold" style="font-size: small;">Clients</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active text-light  fw-bold" style="font-size: small;">Price</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active text-light fw-bold" style="font-size: small;">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active text-light fw-bold borderdt" style="font-size: small;"><i class="fa-solid fa-phone"></i>&nbsp;123&nbsp;456&nbsp;7890</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>  
+    <div class="container py-2">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
+            <div class="col col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7 text-light textCenter">
+               <p class="h5" style="font-size: medium; font-weight: 500;">What We can do for you?<span style="border: solid 1px white;" class="paddacci mx-1">Accident</span>Law</p>
+               <p class="h4 pt-1 pb-2">Promote Your Law Business</p> 
+               <p class="h6" style="font-size: smaller; font-weight: 400;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                   Dolorem inventore quibusdam, a adipisci nesciunt nam beatae sunt. Nulla alias consectetur, 
+                    amet sint numquam culpa unde nobis commodi dicta a rerum.</p>
+               <button class="btn btn-primary text-light py-2 px-3 my-4" style="text-transform: uppercase; border-radius: 0; font-size: small; font-weight: 500;">get started</button>
+            </div>
+            <div class="col col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5  textCenter1">
+              <div class="card" style="border-radius: 0; border-bottom: 5px solid blue;">
+                <div class="card-body mx-3">
+                <form action="" method="POST">
+                  <p class="h4 text-dark pt-3 pb-1 text-center" style="text-transform: uppercase;">get your free estimate</p>
+                  <div class="mt-3 form-group">
+                    <input type="text" style="border-radius: 0;" class="form-control" id="name" name="name" placeholder="Your Full Name *">
+                  </div> 
+                  <div class="mt-3 form-group">
+                    <input type="email"  style="border-radius: 0;" class="form-control" id="email" placeholder="Your Email *" aria-describedby="emailHelp"> 
+                  </div> 
+                  <div class="mt-3 form-group">
+                    <input type="phone"  style="border-radius: 0;" class="form-control" id="phone" placeholder="Your Phone *">
+                  </div> 
+                  <div class="mt-3 form-group">
+                    <textarea name="message"  style="border-radius: 0;" id="message" class="form-control" rows="3" placeholder="Message"></textarea>
+                  </div>
+                  <div class="my-3 form-group">
+                    <button type="submit" class="btn btn-primary btn-block w-100 py-2" style="border-radius: 0; text-transform: uppercase; font-size: small; font-weight: bold;">submit now</button>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid py-4" style="background-color:rgb(239, 239, 239);"> 
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-5 row-cols-lg-5 row-cols-xl-5 row-cols-xxl-5">
+          <div class="col  col-sm-12 col-md-2.4 col-lg-2.4 col-xl-2.4 col-xxl-2.4">
+             <p class="h4 text-dark fw-bold text-center fontsizeB"><img src="https://wpcrunch.com/wp-content/uploads/2019/08/themeforest.png" style="width: 25px;">themeforest</p>
+          </div>
+          <div class="col  col-sm-12 col-md-2.4 col-lg-2.4 col-xl-2.4 col-xxl-2.4">
+            <p class="h4 text-dark text-center fontsize"><img src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/og-images/codecanyon-c6c33074e485df58438aeed370269494.png" style="width: 26px;">codecanyon</p>
+          </div>
+          <div class="col  col-sm-12 col-md-2.4 col-lg-2.4 col-xl-2.4 col-xxl-2.4">
+            <p class="h4 text-dark text-center fontsize"><img src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/og-images/graphicriver-02a569479f9208532c5e1f3621ff619e.png" style="width: 32px; ">graphicriver</p>
+          </div>
+          <div class="col  col-sm-12 col-md-2.4 col-lg-2.4 col-xl-2.4 col-xxl-2.4">
+            <p class="h4 text-dark fw-bold text-center fontsizeB"><img src="https://wpcrunch.com/wp-content/uploads/2019/08/themeforest.png" style="width: 25px;">themeforest</p>
+          </div>
+          <div class="col  col-sm-12 col-md-2.4 col-lg-2.4 col-xl-2.4 col-xxl-2.4">
+            <p class="h4 text-dark text-center fontsize"><img src="https://assets.market-storefront.envato-static.com/storefront/packs/media/images/og-images/graphicriver-02a569479f9208532c5e1f3621ff619e.png" style="width: 32px;">graphicriver</p>
+          </div>  
+        </div>
+      </div>
+    </div>     
+    <div class="container-fluid bg-light">
+      <div class="container pt-4 pb-5">
+        <div class="row-1">
+        <div class="col-12 text-center">
+        <p class="h3 fw-600 text-dark text-center pt-4">Practice Areas</p>
+        <div style="display: flex; justify-content: center;">
+         <div class="borderbottom mt-2"></div>
+        </div>
+        <p class="h6 text-center pt-3 pb-5" style="font-size:small; font-weight: 400; color: rgb(135, 136, 137);">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Quis quam ipsam, repellendus sequi minima expedita necessitatibus repellat tempora
+           recusandae non aliquid iusto quibusdam rerum asperiores! Sequi, enim? Temporibus, iusto unde.</p>
+        </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 text-center">
+          <div class="col  col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">   
+             <img src="https://media.istockphoto.com/photos/paparazzi-picture-id912227022?k=20&m=912227022&s=612x612&w=0&h=gu7rrK4jcu2MG28oO3eeDPx6cM5m9Q0a9UgrLhEpimM="  class="img-fluid img-thumbnail" style="border: dotted blue 2px; width: 300px;"> 
+             <p class="h3 text-dark pt-3" style="font-size:medium; font-weight: 700; text-transform: capitalize;">divorce law</p>
+             <p class="h5 pt-1 pb-4" style="font-size:small; color: rgb(155, 157, 157);">Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit Pellentesque.</p>
+          </div>
+          <div class="col  col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">   
+            <img src="https://terryandrobertslaw.com/wp-content/uploads/2021/09/mistakes-during-divorce.png"  class="img-fluid img-thumbnail" style="border: dotted blue 2px; width: 300px;"> 
+            <p class="h3 text-dark pt-3" style="font-size:medium; font-weight: 700; text-transform: capitalize;">litigation</p>
+            <p class="h5 pt-1 pb-4" style="font-size:small; color: rgb(155, 157, 157);">Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit Pellentesque.</p>
+          </div>
+          <div class="col  col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">   
+            <img src="https://badrelaw.com/wp-content/uploads/2019/08/Automobile_Accident_Lawyer.jpg"  class="img-fluid img-thumbnail" style="border: dotted blue 2px; width: 300px;"> 
+            <p class="h3 text-dark pt-3" style="font-size:medium; font-weight: 700; text-transform: capitalize;">accident law</p>
+            <p class="h5 pt-1 pb-2" style="font-size:small; color: rgb(155, 157, 157);">Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit Pellentesque.</p>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 text-center pt-3">
+          <div class="col  col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">   
+            <img src="https://lh3.googleusercontent.com/6TbtRJU9lJQbRp29ycDdrcugmXYPHWH_cBLx7ldsIeQqt7PM0epL8VxlQgDiju4Nkobk4tsdrZFv-Wl9QfgXZQ=s1000"  class="img-fluid img-thumbnail " style="border: dotted blue 2px; width: 301px;">
+            <p class="h3 text-dark pt-3" style="font-size:medium; font-weight: 700; text-transform: capitalize;">drug law</p>
+            <p class="h5 pt-1 pb-4" style="font-size:small; color: rgb(155, 157, 157);">Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit Pellentesque.</p> 
+          </div>
+          <div class="col col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">   
+            <img src="https://www.lawyer-monthly.com/Lawyer-Monthly/wp-content/uploads/2019/05/Why-You-Should-Hire-a-Personal-Injury-Attorney.jpg"  class="img-fluid img-thumbnail" style="border: dotted blue 2px; width: 300px;"> 
+            <p class="h3 text-dark pt-3" style="font-size:medium; font-weight: 700; text-transform: capitalize;">personal law</p>
+            <p class="h5 pt-1 pb-4" style="font-size:small; color: rgb(155, 157, 157);">Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit Pellentesque.</p>
+          </div> 
+          <div class="col col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">   
+            <img src="https://image1.masterfile.com/getImage/NjAwLTAyMjAxMzE4ZW4uMDAwMDAwMDA=AGhJ$I/600-02201318en_Masterfile.jpg"  class="img-fluid img-thumbnail" style="border: dotted blue 2px; width: 300px;"> 
+            <p class="h3 text-dark pt-3" style="font-size:medium; font-weight: 700; text-transform: capitalize;">criminal law</p>
+            <p class="h5 pt-1 pb-3" style="font-size:small; color: rgb(155, 157, 157);">Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit Pellentesque.</p>
+          </div>
+        </div>  
+      </div>
+    </div>   
+    <div class="container-fluid featureDisplay1" style="background-color:rgb(239, 239, 239);"> 
+      <div class="container">
+         <p class="h3 text-dark text-center fw-600 pt-5" style="text-transform: capitalize;">amazing features</p>
+         <div style="display: flex; justify-content: center;">
+            <div class="borderbottom mt-2"></div> 
+         </div>   
+         <p class="h6 pt-3 pb-3" style="font-size:small; font-weight: 400; color: rgb(91, 92, 93);">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Itaque architecto ipsum suscipit odit amet praesentium expedita unde,
+          earum repellendus possimus cum, cupiditate hic ipsam molestiae explicabo aperiam optio, ullam atque.</p>
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 pb-5"> 
+          <div class="col col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-center">
+            <img src="https://previews.123rf.com/images/bowie15/bowie151302/bowie15130200064/17885127-businessman-with-umbrella-protects-another-man.jpg"  class="img-fluid img-thumbnail p-2 mt-3" style="border: dotted blue 2px; width: 320px; min-height: 320px;">
+          </div>
+          <div class="col col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 text-start">  
+            <p class="h6 text-start py-3" style="font-size:small; font-weight: 400; color: rgb(91, 92, 93);">  
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+             Itaque architecto ipsum suscipit odit amet praesentium expedita unde,
+             earum repellendus possimus cum, cupiditate hic ipsam molestiae explicabo aperiam optio, ullam atque.
+            </p> 
+            <div class="container-fluid ">
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2" style="display:flex; column-gap: 2rem;">
+              <div class="col col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
+                <i class="fa-solid fs-1 fa-paintbrush  fw-bold text-primary mb-3"></i>
+              </div>
+              <div class="col col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10"> 
+                <p class="h6 text-dark  fw-bold">First Feature goes here!</p>
+                <p lass="h6 pb-3" style="font-size:small; font-weight: 500; color: rgb(81, 79, 79);">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                  Similique est pariatur iusto perspiciatis nemo a eveniet optio.   
+                  Modi praesentium aspernatur perferendis nihil quasi minus, 
+                  debitis provident voluptates, id repudiandae pariatur.                   
+                </p>   
+              </div>
+            </div>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2" style="display:flex; column-gap: 2rem;">
+              <div class="col col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"> 
+                <i class="fa-solid fs-1 fa-code  fw-bold  text-primary mb-3"></i>
+              </div> 
+              <div class="col col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                <p class="h6 text-dark  fw-bold">Second Feature goes here!</p>
+                <p lass="h6 pb-3" style="font-size:small; font-weight: 500; color: rgb(81, 79, 79);">    
+                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                 Similique est pariatur iusto perspiciatis nemo a eveniet optio.   
+                 Modi praesentium aspernatur perferendis nihil quasi minus, 
+                 debitis provident voluptates, id repudiandae pariatur.                   
+                </p>  
+              </div> 
+            </div>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2" style="display:flex; column-gap: 2rem;">
+              <div class="col col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
+                <i class="fa-solid fs-1 fa-paper-plane text-primary fw-bold mb-3"></i>
+              </div>
+              <div class="col col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10"> 
+                <p class="h6 text-dark  fw-bold">Third Feature goes here!</p>
+                <p lass="h6 pb-3" style="font-size:small; font-weight: 500; color: rgb(81, 79, 79);">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Similique est pariatur iusto perspiciatis nemo a eveniet optio.   
+                Modi praesentium aspernatur perferendis nihil quasi minus, 
+                debitis provident voluptates, id repudiandae pariatur.                  
+                </p> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>  
+  </div>
+       <div class="container-fluid text-center featureDisplay2" style="background-color:rgb(239, 239, 239);"> 
+         <div class="container">
+            <p class="h3 text-dark text-center fw-600 pt-5" style="text-transform: capitalize;">amazing features</p>
+            <div style="display: flex; justify-content: center;">
+                <div class="borderbottom mt-2"></div> 
+            </div> 
+            <p class="h6 pt-3 pb-3" style="font-size:small; font-weight: 400; color: rgb(91, 92, 93);">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Itaque architecto ipsum suscipit odit amet praesentium expedita unde,
+              earum repellendus possimus cum, cupiditate hic ipsam molestiae explicabo aperiam optio, ullam atque.</p>
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 pb-5"> 
+              <div class="col col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-center">
+                <img src="https://previews.123rf.com/images/bowie15/bowie151302/bowie15130200064/17885127-businessman-with-umbrella-protects-another-man.jpg"  class="img-fluid img-thumbnail p-2 mt-3" style="border: dotted blue 2px; width: 320px; min-height: 320px;">
+              </div>
+              <div class="col col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 ">  
+                <p class="h6  py-3" style="font-size:small; font-weight: 400; color: rgb(91, 92, 93);">  
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                 Itaque architecto ipsum suscipit odit amet praesentium expedita unde,
+                 earum repellendus possimus cum, cupiditate hic ipsam molestiae explicabo aperiam optio, ullam atque.
+                </p> 
+                <div class="container-fluid text-center">
+                  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1 row-cols-xxl-1">
+                    <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                      <i class="fa-solid fs-1 fa-paintbrush  fw-bold text-primary mb-3"></i>
+                    </div>
+                    <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"> 
+                      <p class="h6 text-dark  fw-bold">First Feature goes here!</p>
+                      <p lass="h6 pb-3" style="font-size:small; font-weight: 500; color: rgb(81, 79, 79);">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Similique est pariatur iusto perspiciatis nemo a eveniet optio.   
+                        Modi praesentium aspernatur perferendis nihil quasi minus, 
+                        debitis provident voluptates, id repudiandae pariatur.                   
+                      </p>   
+                    </div>
+                  </div>
+                  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1 row-cols-xxl-1">
+                    <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"> 
+                      <i class="fa-solid fs-1 fa-code  fw-bold  text-primary mb-3"></i>
+                    </div> 
+                    <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                      <p class="h6 text-dark  fw-bold">Second Feature goes here!</p>
+                      <p lass="h6 pb-3" style="font-size:small; font-weight: 500; color: rgb(81, 79, 79);">    
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Similique est pariatur iusto perspiciatis nemo a eveniet optio.   
+                      Modi praesentium aspernatur perferendis nihil quasi minus, 
+                      debitis provident voluptates, id repudiandae pariatur.                   
+                      </p>  
+                    </div> 
+                  </div>
+                  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1 row-cols-xxl-1">
+                    <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                      <i class="fa-solid fs-1 fa-paper-plane text-primary fw-bold mb-3"></i> 
+                    </div>
+                    <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"> 
+                      <p class="h6 text-dark  fw-bold">Third Feature goes here!</p>
+                      <p lass="h6 pb-3" style="font-size:small; font-weight: 500; color: rgb(81, 79, 79);">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Similique est pariatur iusto perspiciatis nemo a eveniet optio.   
+                      Modi praesentium aspernatur perferendis nihil quasi minus, 
+                      debitis provident voluptates, id repudiandae pariatur.                  
+                      </p> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div> 
+        </div>    
+    <div class="container-fluid bg-light">  
+      <div class="container">
+         <p class="h3 text-dark text-center fw-600 pt-5" style="text-transform: capitalize;">about us</p>
+         <div style="display: flex; justify-content: center;">
+            <div class="borderbottom mt-2"></div> 
+         </div>   
+         <p class="h6 text-center pt-3 pb-3" style="font-size:small; font-weight: 400; color: rgb(91, 92, 93);">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           Iure voluptatem cupiditate earum et. Alias dolores quas repellendus, 
+          sed quo odit, labore et incidunt illo repudiandae exercitationem eius impedit saepe fugiat.
+        </p>
+         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 pb-5">
+           <div class="col col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8"> 
+             <p class="h6 text-start text-dark fw-bold pt-4 mt-1">Fusce consequat elit eget</p>  
+             <p class="h6 text-start pb-2 pt-1" style="font-size:small; font-weight: 500; color: rgb(81, 79, 79);">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo aliquid incidunt vel,    
+              voluptate nostrum culpa aspernatur error molestias sapiente
+              adipisci qui tenetur porro provident tempore minima iusto aut optio
+              Tenetur facere maxime quisquam, necessitatibus nulla at officia iste saepe obcaecati  
+              quibusdam numquam cumque amet molestiae. Esse, itaque! Quod assumenda aut animi.  
+             </p>   
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 mt-4 pb-5 text-center">
+                   <div class="col col-sm-12 col-md-2.33 col-lg-2.33 col-xl-2.33 col-xxl-2.33"> 
+                    <i class="fas fa-cogs text-center text-light fs-1 fw-bold mb-2" style="background: linear-gradient(#fc00ff,#00dbde); padding: 34px ;border-radius: 50%;" ></i>
+                    <p class="text-dark pb-2" style="font-size: small;">Mauris convallis felis</p> 
+                   </div>
+                   <div class="col col-sm-12 col-md-2.33 col-lg-2.33 col-xl-2.33 col-xxl-2.33"> 
+                    <i class="fa-solid fa-desktop text-center text-light fs-1 fw-bold mb-2" style="background: linear-gradient(#fc00ff,#00dbde); padding: 34px; border-radius: 50%;"></i>
+                    <p class="text-dark pb-2" style="font-size: small;">Mauris convallis felis</p>
+                   </div>    
+                   <div class="col col-sm-12 col-md-2.33 col-lg-2.33 col-xl-2.33 col-xxl-2.33"> 
+                    <i class="fa-solid fa-tags text-center text-light mb-2  fs-1 fw-bold" style="background: linear-gradient(#fc00ff,#00dbde); padding: 33px 36px; border-radius: 50%;"></i>
+                    <p class="text-dark" style="font-size: small;">Mauris convallis felis</p>
+                   </div>   
+                </div>     
+           </div>  
+          <div class="col col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-center">
+             <img src="https://previews.123rf.com/images/opolja/opolja1309/opolja130900026/22475294-business-people-shaking-hands-finishing-up-a-meeting.jpg"  class="img-fluid img-thumbnail p-2 mt-1" style="border: dotted blue 2px; width: 350px; min-height: 280px;"> 
+          </div>  
+         </div>
+      </div>
+    </div>
+    <div class="BR2 pb-3 bg-info">
+       <div class="container-fluid">
+         <div class="container pb-5">
+           <p class="h3 text-light text-center fw-600 pt-5">Watch our video</p>
+            <div style="display: flex; justify-content: center;">
+              <div class="borderbottom mt-2"></div> 
+            </div> 
+           <p class="text-light text-center pt-3 pb-5" style="font-size: small; font-weight: 600;">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quod reiciendis dicta praesentium hic. Ex deserunt, ratione enim reiciendis quasi, repellat id neque accusamus nobis eligendi hic natus quas ea pariatur. 
+                Accusamus aliquid illo praesentium aperiam repellendus eius rem?
+           </p>
+           <div class="text-center">
+              <iframe class="videosize"  src="https://www.youtube.com/embed/oxae42kcc9Y" title="YouTube video player" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div>
+         </div> 
+       </div>  
+    </div>
+    <div class="container-fluid pb-5" style="background-color: rgb(239, 239, 239);">
+      <div class="container">
+        <p class="h3 text-dark text-center fw-600 pt-5">Our Lawyers</p> 
+          <div style="display: flex; justify-content: center;">
+            <div class="borderbottom mt-2"></div> 
+          </div> 
+        <p class=" text-center pt-3 pb-4" style="font-size: x-small; font-weight: 600; color: rgb(135, 132, 132);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis inventore repudiandae maiores deleniti quisquam deserunt earum amet similique nesciunt reprehenderit! Quam commodi ad,
+          Accusamus aliquid  praesentium magni fugit quibusdam fugiat ab doloremque? Possimus.
+       
+        </p>
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-4 row-cols-lg-4  row-cols-xl-4  row-cols-xxl-4 text-center">
+          <div class="col col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 pb-4">
+            <img src="https://cutewallpaper.org/22/money-heist-professor-wallpapers/1741523475.jpg"  class="img-fluid img-thumbnail p-2 mt-1" style="border: dotted blue 2px; width: 200px; height: 190px;"> 
+            <p class="text-primary pt-2" style="text-transform: uppercase; font-size:medium; font-weight:700;">Professor</p>
+            <p class="text-dark" style="text-transform:capitalize; font-size: x-small; font-weight: 600;">co-founder</p> 
+            <i class="fab fa-twitter text-light me-2" style="background-color: rgba(16, 142, 209, 0.923); padding: 8px;"></i>
+            <i class="fab fa-facebook-f text-light me-2"  style="background-color: rgba(15, 4, 102, 0.923); padding: 8px 11px;"></i>
+            <i class="fab fa-linkedin-in text-light"  style="background-color: rgba(19, 79, 170, 0.923); padding: 8px 9px;"></i>  
+          </div>
+          <div class="col col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 pb-4">
+            <img src="https://i.pinimg.com/originals/c1/e8/d9/c1e8d90d1feb691ffe2f344a22bbbf98.jpg"  class="img-fluid img-thumbnail p-2 mt-1" style="border: dotted blue 2px; width: 200px; height: 190px;"> 
+            <p class="text-primary pt-2" style="text-transform: uppercase; font-size:medium; font-weight:700;">Nairobi</p>
+            <p class="text-dark" style="text-transform:capitalize; font-size: x-small; font-weight: 600;">manager</p> 
+            <i class="fab fa-twitter text-light me-2" style="background-color: rgba(16, 142, 209, 0.923); padding: 8px;"></i>
+            <i class="fab fa-facebook-f text-light me-2"  style="background-color: rgba(15, 4, 102, 0.923); padding: 8px 11px;"></i>
+            <i class="fab fa-linkedin-in text-light"  style="background-color: rgba(19, 79, 170, 0.923); padding: 8px 9px;"></i>  
+          </div>
+          <div class="col col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 pb-4">
+            <img src="https://www.pinkvilla.com/files/styles/amp_metadata_content_image/public/money-heist-berlin.jpg"  class="img-fluid img-thumbnail p-2 mt-1" style="border: dotted blue 2px; width: 200px; height: 190px;"> 
+            <p class="text-primary pt-2" style="text-transform: uppercase; font-size:medium; font-weight:700;">Berlin</p>
+            <p class="text-dark" style="text-transform:capitalize; font-size: x-small; font-weight: 600;">designer</p> 
+            <i class="fab fa-twitter text-light me-2" style="background-color: rgba(16, 142, 209, 0.923); padding: 8px;"></i>
+            <i class="fab fa-facebook-f text-light me-2"  style="background-color: rgba(15, 4, 102, 0.923); padding: 8px 11px;"></i>
+            <i class="fab fa-linkedin-in text-light"  style="background-color: rgba(19, 79, 170, 0.923); padding: 8px 9px;"></i>   
+          </div>
+          <div class="col col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 pb-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST053xPWPjsgcSrAMHSGTB4F4-OH5yMtXSIMkMb5ZMG3ctSRWN"  class="img-fluid img-thumbnail p-2 mt-1" style="border: dotted blue 2px; width: 200px; height: 190px;">
+            <p class="text-primary pt-2" style="text-transform: uppercase; font-size:medium; font-weight:700;">Raquel</p>
+            <p class="text-dark" style="text-transform:capitalize; font-size: x-small; font-weight: 600;">developer</p> 
+            <i class="fab fa-twitter text-light me-2" style="background-color: rgba(16, 142, 209, 0.923); padding: 8px;"></i>  
+            <i class="fab fa-facebook-f text-light me-2"  style="background-color: rgba(15, 4, 102, 0.923); padding: 8px 11px;"></i>
+            <i class="fab fa-linkedin-in text-light"  style="background-color: rgba(19, 79, 170, 0.923); padding: 8px 9px;"></i>   
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="container-fluid py-4" style="background:linear-gradient(60deg,#8e2de2,#4a00e0);">
+      <div class="container">
+       <div class="row row-cols-1 row-cols-sm-1 row-cols-md-4 row-cols-lg-4  row-cols-xl-4  row-cols-xxl-4 text-center text-light"> 
+          <div class="col col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <i class="fa-solid fa-users fs-1 text-light fw-bold mt-3 pt-2"></i>
+            <h2 class="pt-3">499</h2>
+            <p class="h6 pb-3" style="font-size: xx-small; font-weight: 600;">Happy Client</p>
+          </div>
+          <div class="col col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <i class="fas fa-code text-center text-light fs-1 fw-bold mt-3  pt-2"></i>
+            <h2  class="pt-3">9598</h2>
+            <p class="h6 pb-3" style="font-size: xx-small; font-weight: 600;">Code Line</p>
+          </div>
+          <div class="col col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <i class="fa-solid fa-laptop text-center text-light fs-1 fw-bold mt-3 pt-2"></i>
+            <h2  class="pt-3">1999</h2>
+            <p class="h6 pb-3" style="font-size: xx-small; font-weight: 600;">Project Finished</p> 
+          </div>
+          <div class="col col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <i class="fa-solid fa-trophy text-center text-light fs-1 fw-bold mt-3 pt-2"></i>
+            <h2  class="pt-3">199</h2>
+            <p class="h6" style="font-size: xx-small; font-weight: 600;">Awards</p>  
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-light py-5">
+      <div class="container">
+        <p class="h3 text-dark text-center" style="text-transform: capitalize; font-size: x-large; font-weight: 600;">What Our Clients Saying</p> 
+        <div style="display: flex; justify-content: center;">
+          <div class="borderbottom mt-2 mb-5"></div>
+        </div>
+        <div id="carouselexample" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="2000">
+          <div class="carousel-indicators"> 
+              <button type="button" data-bs-target="#carouselexample" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#carouselexample" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#carouselexample" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#carouselexample" data-bs-slide-to="3"></button> 
+          </div>
+          <div class="carousel-inner  text-center">  
+              <div class="carousel-item active"> 
+                  <img src="https://virginradio.ro/wp-content/uploads/2020/04/Helsinki-La-Casa-de-Papel-1.jpg" class="marginCarousel"> 
+                  <div class="carousel-caption"> 
+                    <h3 class="text-primary fw-600" style="font-size: large;">Helsinki</h3> 
+                    <h5  style="font-size: x-small; font-weight: 600; color: rgb(90, 89, 89);">CEO-Company Inc</h5> 
+                    <p class="pt-1" style="font-size: small; font-weight: 600; color: rgb(154, 152, 152);"><em>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse blanditiis aperiam a, explicabo commodi non provident nostrum possimus consectetur natus illo voluptates labore ut eos, voluptatem similique sed fuga quos."</em></p>                       
+                  </div>
+              </div>     
+              <div class="carousel-item">
+               <img src="https://im.indiatimes.in/content/2020/Aug/RIO1_5f2ba5b149f97.jpg?w=725&h=543" class="marginCarousel">
+               <div class="carousel-caption">
+                <h3 class="text-primary fw-600" style="font-size: large;">Rio</h3> 
+                <h5  style="font-size: x-small; font-weight: 600; color: rgb(90, 89, 89);">Software Engineer</h5> 
+                <p class="pt-1" style="font-size: small; font-weight: 600; color: rgb(154, 152, 152);"><em>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse blanditiis aperiam a, explicabo commodi non provident nostrum possimus consectetur natus illo voluptates labore ut eos, voluptatem similique sed fuga quos."</em></p>
+               </div>
+              </div>
+              <div class="carousel-item">
+                  <img src="https://hips.hearstapps.com/hmg-prod/images/la-casa-de-papel-part3-e02-unit-00523-1563307071.jpg?crop=1.00xw:0.669xh;0,0.0136xh&resize=480:*" class="marginCarousel"> 
+                  <div class="carousel-caption">
+                    <h3 class="text-primary fw-600" style="font-size: large;">Palermo</h3> 
+                    <h5  style="font-size: x-small; font-weight: 600; color: rgb(90, 89, 89);">Software Developer</h5> 
+                    <p class="pt-1" style="font-size: small; font-weight: 600; color: rgb(154, 152, 152);"><em>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse blanditiis aperiam a, explicabo commodi non provident nostrum possimus consectetur natus illo voluptates labore ut eos, voluptatem similique sed fuga quos."</em></p>
+                  </div> 
+              </div>
+              <div class="carousel-item"> 
+                <img src="https://bingeddata.s3.amazonaws.com/uploads/2021/08/How-Has-Tokyo-Evolved-As-The-Necessary-Evil-In-Netflixs-Money-Heist.jpg" class="marginCarousel">
+                <div class="carousel-caption">
+                  <h3 class="text-primary fw-600" style="font-size: large;">Tokyo</h3> 
+                  <h5  style="font-size: x-small; font-weight: 600; color: rgb(90, 89, 89);">System Engineer</h5> 
+                  <p class="pt-1" style="font-size: small; font-weight: 600; color: rgb(154, 152, 152);"><em>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse blanditiis aperiam a, explicabo commodi non provident nostrum possimus consectetur natus illo voluptates labore ut eos, voluptatem similique sed fuga quos."</em></p>
+                </div> 
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <div class="container-fluid" style="background-color: rgb(239, 239, 239);">
+      <div class="container">
+        <p class="h3 text-center pt-5 text-dark fw-600">Our Packages</p>
+        <div style="display:flex; justify-content: center;">
+          <div class="borderbottom mt-2 mb-3"></div>
+        </div>
+        <p class="pb-5" style="text-align: center; font-size: x-small; font-weight: 600; color: rgb(154, 152, 152); ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero repudiandae accusantium rerum consequatur iure, 
+          error ducimus dolor rem, voluptates animi aut reiciendis ipsa hic nemo, unde asperiores incidunt quia? Quos.</p>
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3  row-cols-xl-3  row-cols-xxl-3 text-center pb-5">
+          <div class="col col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card pb-4 pt-4 px-3 mb-5" style="border: none; border-radius: 0;">   
+              <h1 class="text-dark fs-3 fw-bold mx-3">Basic</h1>
+              <i class="fa-solid fs-1 fa-paper-plane text-secondary fw-bold"></i>  
+              <div class="card-body">
+                  <p class="card-text fs-2 fw-bold py-0 my-0 text-primary">$49</p> 
+                  <p class="card-header fw-400 bg-transparent pb-3" style="font-size: x-small; color: rgb(149, 147, 147);">per month</p> 
+                  <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(149, 147, 147);">15 pages</p>
+                  <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(149, 147, 147);">40 gb storage</p>
+                  <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(149, 147, 147);">unlimited data transfer</p>
+                  <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(149, 147, 147);">100 gb bandwith</p>
+                  <p class="fw-400 bg-transparent mt-2" style="text-transform: uppercase; font-size: x-small; color: rgb(149, 147, 147);">enhanced security</p>
+                  
+                  <a href="#" class="btn btn-dark text-light w-100 mt-1" style="border: none; border-radius: 0; text-transform: uppercase;">buy now</a>
+              </div>
+          </div>  
+          </div>
+          <div class="col col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card pt-4 pb-4 p-3 mb-5 shadow bg-body"  style="border: solid 4px white; border-radius: 0;  background:linear-gradient(120deg,#8e54e9,#4776e6)">
+              <h1 class="text-light fs-3 fw-bold mx-3">Corporate</h1>  
+              <i class="fa-solid fa-user-large text-light fs-1 fw-bold"></i>
+              <div class="card-body"> 
+                <p class="card-text fs-2 fw-bold py-0 my-0 text-light">$49</p>  
+                <p class="card-header fw-400 bg-transparent pb-3" style="font-size: x-small; color: rgb(225, 224, 224);">per month</p> 
+                <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(225, 224, 224);">15 pages</p>
+                <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(225, 224, 224);">40 gb storage</p>
+                <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(225, 224, 224);">unlimited data transfer</p>
+                <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(225, 224, 224);">100 gb bandwith</p>
+                <p class="fw-400 bg-transparent mt-2" style="text-transform: uppercase; font-size: x-small; color: rgb(225, 224, 224);">enhanced security</p>
+                
+                <a href="#" class="btn btn-light text-primary w-100 mt-1" style="border: none; border-radius: 0; text-transform: uppercase;">buy now</a>
+              </div>
+          </div>
+          </div>
+          <div class="col col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">  
+            <div class="card pb-4 pt-4"  style="border: none; border-radius: 0;">
+              <h1 class="text-dark fs-3 fw-bold mx-3">Premium</h1>
+              <i class="fa-solid fa-trophy text-secondary fs-1 fw-bold"></i>
+              <div class="card-body">
+                <p class="card-text fs-2 fw-bold py-0 my-0 text-primary">$49</p> 
+                <p class="card-header fw-400 bg-transparent pb-3" style="font-size: x-small; color: rgb(149, 147, 147);">per month</p> 
+                <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(149, 147, 147);">15 pages</p>
+                <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(149, 147, 147);">40 gb storage</p>
+                <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(149, 147, 147);">unlimited data transfer</p>
+                <p class="card-header fw-400 bg-transparent" style="text-transform: uppercase; font-size: x-small; color: rgb(149, 147, 147);">100 gb bandwith</p>
+                <p class="fw-400 bg-transparent mt-2" style="text-transform: uppercase; font-size: x-small; color: rgb(149, 147, 147);">enhanced security</p>
+                
+                <a href="#" class="btn btn-dark text-light  w-100 mt-1" style="border: none; border-radius: 0; text-transform: uppercase;">buy now</a>
+              </div>
+          </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid py-5" style="background-color: rgb(246, 246, 246);">
+      <div class="container">
+        <p class="h3 text-center text-dark fs-3 fw-600">Get Free Quote</p>
+        <div style="display: flex; justify-content: center;">
+          <div class="borderbottom mt-2 mb-1"></div>
+        </div> 
+          <p class="pt-4 pb-4" style="text-align: center; font-size: x-small; font-weight: 400; color: rgb(161, 161, 161);">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Dolore iste consectetur aliquam excepturi. Vero ducimus libero quidem, debitis id aliquam iure numquam voluptas ullam temporibus quod autem nesciunt dolorum dicta.</p>
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3  row-cols-xl-3  row-cols-xxl-3 text-start">
+          <div class="col col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card mb-4 bg-light py-3 px-2" style="border-radius: 0;"> 
+             <p class="text-dark fs-6 fw-500"><i class="fa-solid fa-signs-post text-primary fs-5"></i>&nbsp;&nbsp;Address</p>
+             <p class="fs-6 fw-300 text-secondary">123 Grant Line,New Lipsum, CA 12345</p>
+            </div>
+          </div>
+          <div class="col col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card mb-4 bg-light py-3 px-2" style="border-radius: 0;"> 
+              <p class="text-dark fs-6 fw-500"><i class="fa-solid fa-phone text-primary fs-5"></i>&nbsp;&nbsp;Phone Number</p>
+              <p class="fs-6 fw-300 text-secondary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(+1)234.567.8900</p>  
+            </div> 
+          </div>  
+          
+          <div class="col col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 alignCol3"> 
+            <div class="card mb-4 bg-light py-3 px-2" style="border-radius: 0;"> 
+              <p class="text-dark fs-6 fw-500"><i class="fa-solid fa-envelope text-primary fs-5"></i>&nbsp;&nbsp;Email</p>  
+              <p class="fs-6 fw-300 text-secondary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;support@agency.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map"> 
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125344.51174104323!2d79.29802623810787!3d10.962164307733964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5532b360353419%3A0x9ecb5d94413ad35!2sKumbakonam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1649555293713!5m2!1sen!2sin" class="w-100"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="container-fluid bg-dark">
+      <div class="container py-4 text-center">
+        <div class="pb-3">
+        <i class="fa-brands fa-facebook-f text-light"></i>&nbsp;&nbsp;<i class="fa-brands fa-twitter text-light"></i>&nbsp;&nbsp;<i class="fa-brands fa-linkedin-in text-light"></i>&nbsp;&nbsp;<i class="fa-brands fa-google-plus-g text-light"></i>&nbsp;&nbsp;<i class="fa-brands fa-behance text-light"></i>
+        </div>
+        <p class="h5 text-center text-light" style="font-size: x-small;">2022 LOGODESIGN | All Rights Reserved.</p>
+      </div> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
